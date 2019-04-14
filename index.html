@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Транспортная задача</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<table>
+		<td>Строительные площадки</td>
+	</table>
+
+	<table>
+		<tr>
+			<td>Заводы</td>
+			<td>B1</td>
+			<td>B2</td>
+			<td>B3</td>
+			<td>B4</td>
+			<td>Ресурсы заводов</td>
+		</tr>
+
+		<tr>
+			<td>A1</td>
+			<td><input id="p00" class="price" type="number" value="0"></td>
+			<td><input id="p10" class="price" type="number" value="0"></td>
+			<td><input id="p20" class="price" type="number" value="0"></td>
+			<td><input id="p30" class="price" type="number" value="0"></td>
+			<td class="res"><input id="factoryRes0" type="number" value="0"></td>
+		</tr>
+
+		<tr>
+			<td>A2</td>
+			<td><input id="p01" class="price" type="number" value="0"></td>
+			<td><input id="p11" class="price" type="number" value="0"></td>
+			<td><input id="p21" class="price" type="number" value="0"></td>
+			<td><input id="p31" class="price" type="number" value="0"></td>
+			<td class="res"><input id="factoryRes1" type="number" value="0"></td>
+		</tr>
+
+		<tr>
+			<td>A3</td>
+			<td><input id="p02" class="price" type="number" value="0"></td>
+			<td><input id="p12" class="price" type="number" value="0"></td>
+			<td><input id="p22" class="price" type="number" value="0"></td>
+			<td><input id="p32" class="price" type="number" value="0"></td>
+			<td class="res"><input id="factoryRes2" type="number" alue="0"></td>
+		</tr>
+
+		<tr>
+			<td>A4</td>
+			<td><input id="p03" class="price" type="number" value="0"></td>
+			<td><input id="p13" class="price" type="number" value="0"></td>
+			<td><input id="p23" class="price" type="number" value="0"></td>
+			<td><input id="p33" class="price" type="number" value="0"></td>
+			<td class="res"><input id="factoryRes3" type="number" value="0"></td>
+		</tr>
+
+		<tr>
+			<td>
+				Требуемые ресурсы
+			</td>
+			<td class="res"><input id="needRes0" type="number" value="0"></td>
+			<td class="res"><input id="needRes1" type="number" value="0"></td>
+			<td class="res"><input id="needRes2" type="number" value="0"></td>
+			<td class="res"><input id="needRes3" type="number" value="0"></td>
+		</tr>
+	</table>
+
+	<div style="display: flex">
+		<button id="buttonStart" class="button">Начать</button>
+		<button id="buttonSet" class="button">Применить</button>
+		<button id="buttonNext" class="button">Продолжить</button>
+	</div>
+
+	<table class="text" style="margin-bottom: 300px">
+		<tr>
+			<td>Затраты</td>
+			<td>Потенциалы заполненых</td>
+			<td>Значения переменных</td>
+			<td>Потенциалы не заполненых</td>
+			<td>Распределенние ресурсов</td>
+		</tr>
+
+		<tr>
+			<td id="cost"></td>
+			<td id="filledUV"></td>
+			<td id="inputsUV">
+				<table>
+					<tr>
+						<td>U1 = <input id="u0" type="number" value="0"></td>
+					</tr>
+					<tr>
+						<td>U2 = <input id="u1" type="number"></td>
+					</tr>
+					<tr>
+						<td>U3 = <input id="u2" type="number"></td>
+					</tr>
+					<tr>
+						<td>U4 = <input id="u3" type="number"></td>
+					</tr>
+					<tr>
+						<td>V1 = <input id="v0" type="number"></td>
+					</tr>
+					<tr>
+						<td>V2 = <input id="v1" type="number"></td>
+					</tr>
+					<tr>
+						<td>V3 = <input id="v2" type="number"></td>
+					</tr>
+					<tr>
+						<td>V4 = <input id="v3" type="number"></td>
+					</tr>
+				</table>
+			</td>
+			<td id="notFilledUV"></td>
+			<td>
+				<table>
+					<tr>
+						<td id="s00" class="cell"></td>
+						<td id="s10" class="cell"></td>
+						<td id="s20" class="cell"></td>
+						<td id="s30" class="cell"></td>
+					</tr>
+					<tr>
+						<td id="s01" class="cell"></td>
+						<td id="s11" class="cell"></td>
+						<td id="s21" class="cell"></td>
+						<td id="s31" class="cell"></td>
+					</tr>
+					<tr>
+						<td id="s02" class="cell"></td>
+						<td id="s12" class="cell"></td>
+						<td id="s22" class="cell"></td>
+						<td id="s32" class="cell"></td>
+					</tr>
+					<tr>
+						<td id="s03" class="cell"></td>
+						<td id="s13" class="cell"></td>
+						<td id="s23" class="cell"></td>
+						<td id="s33" class="cell"></td>
+					</tr>
+					<table>
+						<tr>
+							<td id="cicle"></td>
+						</tr>
+
+						<tr>
+							<td><button id="buttonClear" class="button">Очистить цикл</button></td>
+						</tr>
+					</table>
+					
+				</table>
+		
+			</td>
+		</tr>
+	</table>
+
+	<script src="main.js" type="text/javascript"></script>
+</body>
+</html>
